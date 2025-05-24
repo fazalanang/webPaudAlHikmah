@@ -1,0 +1,87 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+}
+.custom-navbar {
+        background-color: white;
+        padding: 1rem 5%;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .custom-navbar .navbar-brand h1 {
+        color: #ec4d37;
+        font-size: 1.75rem;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .custom-navbar .navbar-brand i {
+        color: #ec4d37;
+        margin-right: 10px;
+    }
+
+    .btn-login {
+        background-color: #ec4d37;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        border: none;
+    }
+
+    .btn-login:hover {
+        background-color: #d8432f;
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .custom-navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+.container {
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+.section{
+    width:85%;
+    display: flex;
+}
+
+.section .left {
+    flex: 30%;
+    margin-right: 70px;
+}
+
+.section .right {
+    flex: 70%;
+}
+
+.right table {
+    margin-top: 20px;
+    font-size: 14px;
+    border-radius: 15px;
+}
+
+.right table th, .right table td {
+    text-align: center;
+}
+
+.right table button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.list-group-item {
+    font-size: 15px;
+    padding: 10px 15px;
+}
