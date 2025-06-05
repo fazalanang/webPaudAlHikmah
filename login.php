@@ -1,3 +1,23 @@
+<?php
+require 'koneksi.php';
+
+if(isset($_POST['login'])){
+  $emailLogin = $_POST['emailLogin'];
+  $paswordLogin = $_POST['passwordLogin'];
+
+  $cekdatabase = mysqli_query($conn,"SELECT * FROM loginsiswa where emailLogin='$emailLogin' and passwordLogin='$paswordLogin'");
+
+  if (mysqli_num_rows($cekdatabase)>0) {
+    $_SESSION['log'] = 'True';
+    header('location:user.html');
+  } else {
+    header('location:login.php');
+  };
+  
+};
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,23 +34,23 @@
     <div class="row align-items-center">
       <div class="col-md-6">
         <div class="text-start mb-4">
-		  <a href="index.html" class="navbar-brand">
+		  <a href="index.php" class="navbar-brand">
 			<h1 class="text-primary fw-bold"><i class="fa fa-book-reader me-2"></i>Paud Al-Hikmah</h1>
 		  </a>
           <h4 class="text-danger fw-semibold">Account Siswa Paud Al Hikmah</h4>
           <p class="text-muted mt-3">Welcome back! Please login to your account.</p>
         </div>
 
-        <form>
+        <form method="post">
           <div class="mb-3">
             <label for="email" class="form-label fw-bold text-purple">
               <i class="fas fa-building-columns me-1"></i>Email section
             </label>
-            <input type="email" class="form-control" id="email" placeholder="Email Address" />
+            <input type="email" class="form-control" name="emailLogin" id="email" placeholder="Email Address" />
           </div>
 
           <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Password" />
+            <input type="password" class="form-control" name="passwordLogin" placeholder="Password" />
           </div>
 
           <div class="d-flex justify-content-between mb-4">
@@ -43,7 +63,7 @@
           </div>
 
           <div class="d-flex gap-3">
-			<a href="user.html" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
+			<button href="user.html" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" name="login">Login<i class="fa fa-arrow-right ms-3"></i></button>
           </div>
         </form>
       </div>

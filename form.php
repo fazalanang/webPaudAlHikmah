@@ -49,14 +49,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto">
-          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="index.php" class="nav-item nav-link">Home</a>
           <a href="gallery.html" class="nav-item nav-link">Gallery</a>
           <a href="classes.html" class="nav-item nav-link">Classes</a>
           <a href="ppdb.html" class="nav-item nav-link active">PPDB</a>
           <a href="contact.html" class="nav-item nav-link">Contact Us</a>
         </div>
         <a
-          href="login.html"
+          href="login.php"
           class="btn btn-primary rounded-pill px-3 d-none d-lg-block"
           >Login<i class="fa fa-arrow-right ms-3"></i
         ></a>
@@ -84,7 +84,7 @@
     <div class="container py-5">
       <div class="form-section">
         <h1 class="mb-4 text-center">Form Pendaftaran</h1>
-        <form id="registrationForm">
+        <form id="registrationForm" method="post">
           <div class="row g-3">
             <div class="col-md-6">
               <div class="form-floating">
@@ -384,19 +384,19 @@
                 <label for="akta" class="form-label"
                   >Fotokopi Akta Kelahiran</label
                 >
-                <input class="form-control" type="file" id="akta" required />
+                <input class="form-control" type="file" id="akta" />
               </div>
               <div class="mb-3">
                 <label for="kk" class="form-label"
                   >Fotokopi Kartu Keluarga</label
                 >
-                <input class="form-control" type="file" id="kk" required />
+                <input class="form-control" type="file" id="kk" />
               </div>
               <div class="mb-3">
                 <label for="ktp" class="form-label"
                   >Fotokopi KTP Orang Tua</label
                 >
-                <input class="form-control" type="file" id="ktp" required />
+                <input class="form-control" type="file" id="ktp" />
               </div>
             </div>
             <div class="col-12">

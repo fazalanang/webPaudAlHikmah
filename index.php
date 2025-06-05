@@ -1,3 +1,7 @@
+<?php
+require 'koneksi.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -77,12 +81,11 @@
           <div class="navbar-nav mx-auto">
             <a href="index.html" class="nav-item nav-link active">Home</a>
             <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-            <a href="classes.html" class="nav-item nav-link">Classes</a>
             <a href="ppdb.html" class="nav-item nav-link">PPDB</a>
             <a href="contact.html" class="nav-item nav-link">Contact Us</a>
           </div>
           <a
-            href="login.html"
+            href="login.php"
             class="btn btn-primary rounded-pill px-3 d-none d-lg-block"
             >Login<i class="fa fa-arrow-right ms-3"></i
           ></a>
